@@ -1,0 +1,44 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/*header area*/
+.navbar{
+    background-color: rgba(235, 191, 81, 0.616)!important;
+}
+.navbar-brand img{
+    width: 150px;
+    padding: 0 10px;
+}
+.nav-link{
+    color: black;
+    font-size: 18px;
+
+}
+.fa-user{
+    font-size: 22px;
+    color: black;
+}
+/*category*/
+.catelog{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    padding: 10px;
+    margin: 2px;
+}
+.card-title{
+    font-weight: 600;
+    color: goldenrod;
+}
+.card-text{
+    font-size: 14px;
+}
+
