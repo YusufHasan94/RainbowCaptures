@@ -41,4 +41,65 @@ body{
 .card-text{
     font-size: 14px;
 }
+/*footer*/
+footer{
+    padding: 10px;
+    background-color: #f8f3ec;
+}
+.footerContainer{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    gap: 5px;
+}
+
+.footerItem ul li{
+    list-style: none;
+}
+.footerItem ul li a{
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+}
+.footerItem h3{
+    font-size: 22px;
+}
+.footerItem i{
+    font-size: 22px;
+}
+.item4 ul{
+    display: flex;
+    gap: 10px;
+}
+.item5{
+    grid-column: 3;
+    grid-row: 1/span 2;
+}
+@media screen and (max-width:667px) {
+    .catelog{
+        padding: 5px;
+    }
+    .card{
+        padding: 2px;
+        margin: 2px;
+    }
+    .card-body{
+        padding: 2px!important;
+    }
+    .card-title{
+        font-size: 16px;
+        font-weight: 400;
+        text-align: center;
+    }
+    .card-text{
+        font-size: 14px;
+    }
+    .footerContainer{
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
 
