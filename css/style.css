@@ -6,10 +6,14 @@ body{
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-/*header area*/
-.navbar{
-    background-color: rgba(235, 191, 81, 0.616)!important;
+*{
+    margin: 0;
+    padding: 0;
 }
+.contentTitle{
+    font-size: 40px;
+}
+/*header area*/
 .navbar-brand img{
     width: 150px;
     padding: 0 10px;
@@ -23,24 +27,177 @@ body{
     font-size: 22px;
     color: black;
 }
+/*slider*/
+
 /*category*/
-.catelog{
+.category .container {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
     padding: 10px;
+    gap: 10px;
+}
+.Gitem1{
+    grid-column: 1/ span 2;
+    grid-row: 1;
+    padding: 10px;
+    text-align: left;    
+}
+.Gitem1 div a{
+    font-size: 16px;
+    text-decoration: none;
+    color: #4e79c9;
+}
+.Gitem1 div p{
+    font-size: 16px;    
+}
+.cateItem div img{
+    width: 100%;
+}
+.cateItem{
+    padding: 5px;
+}
+.cateItem div span{
+    font-size: 26px;
+}
+.cateItem div span:hover{
+    color: #2e7aca;
+}
+.Gitem4,.Gitem5{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+}
+.Gitem5{
+    grid-column: 3;
+    grid-row: 1/ span 2;
+}
+/*About*/
+.About{
+    background-color: #f5f2ee;
+}
+.About .container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 10px;
+    padding: 5px;
+}
+.leftSide{
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.leftSide p{
+    font-size: 16px;
+}
+.leftSide a{
+    text-decoration: none;
+    font-size: 16px;
+    color: #4e79c9;
+}
+.rightSide div{
+    display: flex;
+    justify-content: right;
+    align-items: center;    
+}
+.rightSide img{
+    width: 75%;
+}
+/*gallery*/
+.gallery{
+    padding: 10px;
+}
+.gallery .container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 5px;
+}
+.galleryLeft>div{
+    display: grid;
+    grid-template-columns: 30% 35% 35%;
+}
+.galleryLeft div img{
+    width: 100%;
+}
+.commonContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img2Con>div{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}.img2Con>div>img{
+    width: 80%;
+}
+.galleryRight{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.galleryRight>div{
+    text-align: center;
+}
+.galleryRight>div p{
+    font-size: 16px;
+    
+}.galleryRight>div a{
+   font-size: 16px;
+   color: #4e79c9;
+   text-decoration: none;
+}
+/*add*/
+/*service*/
+.services .container{
+    padding: 10px;
+}
+.sectionTitle{
+    text-align: center;
+}
 .card{
     padding: 10px;
-    margin: 2px;
 }
-.card-title{
-    font-weight: 600;
-    color: goldenrod;
+.card-body{
+    text-align: left;
 }
-.card-text{
-    font-size: 14px;
+.orderBtn{
+    width: 100% !important;
+    border: 2px solid #4e79c9;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+    border-radius: 25px;
 }
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    padding: 10px 0;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 /*footer*/
 footer{
     padding: 10px;
@@ -49,7 +206,7 @@ footer{
 .footerContainer{
     padding: 10px;
     display: grid;
-    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-columns: 30% 30% 40%;
     gap: 5px;
 }
 
@@ -75,6 +232,15 @@ footer{
     grid-column: 3;
     grid-row: 1/span 2;
 }
+
+.container{
+    padding: 10px;
+}
+.sectionTitle h3{
+    font-size: 22px;    
+}
+/**/
+
 @media screen and (max-width:667px) {
     .catelog{
         padding: 5px;
