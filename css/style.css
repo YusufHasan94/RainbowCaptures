@@ -100,7 +100,7 @@ body{
     display: grid;
     grid-template-columns: 50% 50%;
     gap: 5px;
-    padding: 5px;
+    padding: 0;
 }
 .leftSide{
     display: flex;
@@ -177,6 +177,9 @@ body{
 .services .container{
     padding: 10px;
 }
+.serviceTitle{
+    text-align: center;
+}
 .sectionTitle{
     text-align: center;
 }
@@ -190,8 +193,15 @@ body{
     padding: 10px;
 }
 .sectionContent>div>div{
-    text-align: center;
-    padding: 5px;
+    text-align: justify;
+    padding: 10px;
+}
+.bookingPrice{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 .sectionContent>div>div>h1,h3{
     font-size: 28px;
@@ -247,7 +257,12 @@ footer{
     grid-template-columns: 30% 30% 40%;
     gap: 5px;
 }
-
+.footerItem{
+    padding: 3px;
+}
+.footerItem ul{
+    padding: 0;
+}
 .footerItem ul li{
     list-style: none;
 }
@@ -279,6 +294,57 @@ footer{
 }
 /**/
 
+/*photobook*/
+.photoBookSec{
+    padding: 5px;
+}
+.contitleArea{
+    text-align: center;
+    padding: 5px;
+}
+.photoContainer{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    gap: 3px;
+    justify-content: space-between;
+    padding: 5px;
+}
+.imgCon{
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    justify-content: space-between;
+}
+.imgCon>img{
+    width: 100%;
+}
+.albumContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+.albumContainer>img{
+    width: 100%;
+}
+/*creative work design*/
+.creativeWork{
+    padding: 5px;
+}
+.CWContainer{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+}
+.CWAlbum{
+    display: flex;
+    justify-content: center;
+}
+.cwAlbumbtn{
+    color: #2e7aca;
+    text-decoration: none;
+
+}
+/*responsive design*/
 @media screen and (max-width:667px) {
     .contentTitle{
         font-size: 30px;
@@ -297,8 +363,19 @@ footer{
     .catelog{
         padding: 5px;
     }
+    .About .container{
+        gap: 2px;
+        padding: 2px;
+    }
     .leftSide{
         padding: 5px;
+    }
+    .rightSide{
+        display: flex;
+        justify-content: center;
+    }
+    .rightSide>div>img{
+        width: 100%;
     }
     .rightSide div{
         justify-content: center;    
@@ -353,6 +430,22 @@ footer{
         flex-direction: column;
         gap: 5px;
     }
+    .photoContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .CWContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .CWContainer{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 0;
+    }
+
 }
 
 
