@@ -383,6 +383,52 @@ footer{
 .memberCard>span>i{
     padding: 0 10px;
 }
+.loginArea, .bookingArea{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.loginArea>div, .bookingArea>div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+.loginArea>div>h1{
+    font-size: 42px;
+    font-weight: 500;
+}
+.loginArea>div>form, .bookingArea>div>form{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.loginArea>div>form>input, .bookingArea>div>form>input,select,textarea{
+    width: 100%;
+    padding: 5px;
+    font-size: 18px;
+}
+.submit{
+    background-color: #F8F3EC;
+    border: none;
+    font-size: 22px;
+    font-weight: 500;
+}
+#signInNote{
+    color: #4e79c9;
+    font-size: 18px;
+}
+.bookingArea>div>h1{
+    text-align: center;
+    font-size: 42px;
+}
 /*responsive design*/
 @media screen and (max-width:667px) {
     .contentTitle{
@@ -444,6 +490,7 @@ footer{
     }
     .sectionContent>div>div>p{
         font-size: 16px;
+        text-align: left;
     }
     .wordsContainer{
         display: flex;
@@ -497,6 +544,13 @@ footer{
     }
     .MemContainer{
         flex-direction: column;
+    }
+    .loginArea>div>form, .bookingArea>div>form{
+        width: 90%;
+    }
+    .bookingArea>div>h1{
+        text-align: center;
+        font-size: 26px;
     }
 }
 
