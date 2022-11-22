@@ -1,3 +1,24 @@
+<?php
+ $username = $password = "";
+ $usernameErr = $passwordErr = $err = "";
+  if(isset($_POST["submit"])){
+    if(empty($_POST["username"])){
+      $usernameErr = "* required";
+    }
+    else{
+      $username = $_POST["username"];
+    }
+    if(empty($_POST["password"])){
+      $passwordErr = "* required";
+    }
+    else{
+      $password = $_POST["password"];
+    }
+    if($usernameErr!=""||$passwordErr!=""){
+      $err = "* please fill up all necessary info";
+    }
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -31,6 +52,12 @@
     />
     <link rel="stylesheet" href="../css/style.css" />
     <title>Rainbow Captures</title>
+    <style>
+      .error{
+        color: red;
+        
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -53,10 +80,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="../index.html">Home</a>
+                <a class="nav-link" href="../index.php">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="photoBook.html">Gallery</a>
+                <a class="nav-link" href="photoBook.php">Gallery</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link" href="#packages">Packages</a>
@@ -66,33 +93,23 @@
               </li>
             </ul>
             <div class="login bookingPart">
-              <a href="bookingform.html" id="booked">Book Me</a>
-              <a href="signinform.html" id="signin">Sign In</a>
+              <a href="bookingform.php" id="booked">Book Me</a>
+              <a href="signinform.php" id="signin">Sign In</a>
             </div>
           </div>
         </div>
       </nav>
     </header>
     <main>
-      <section class="photoBookSec">
-        <div class="contitleArea">
-          <h1 class="contentTitle">Album 3</h1>
-        </div>
-        <div class="photoContainer container">
-          <div class="container1 albumContainer">
-            <img src="../picture/pic23.jpg" alt="" />
-          </div>
-          <div class="container2 albumContainer">
-            <img src="../picture/pic017.jpg" alt="" />
-            <img src="../picture/pic03.jpg" alt="" />
-          </div>
-          <div class="container3 albumContainer">
-            <img src="../picture/pic22.jpg" alt="" />
-          </div>
-          <div class="container4 albumContainer">
-            <img src="../picture/newpic9.jpg" alt="" />
-            <img src="../picture/DSC_5039.jpg" alt="" />
-          </div>
+      <section class="loginArea">
+        <div class="container">
+          <h1>Log In</h1>
+          <form action="" method="POST">
+            <input type="text" name="username" id="" placeholder="User Name" /> <span class="error"><?php echo $usernameErr?></span>
+            <input type="password" name="password" id="" placeholder="Password" /> <span class="error"><?php echo $passwordErr?></span>
+            <input type="submit" value="submit" name="submit" class="submit" /> <span class="error"><?php echo $err?></span>
+          </form>
+          <span id="signInNote">Note: Only Admin can login here. </span>
         </div>
       </section>
     </main>

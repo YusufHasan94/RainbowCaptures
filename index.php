@@ -62,8 +62,8 @@
               </li>
             </ul>
             <div class="login bookingPart">
-              <a href="html/bookingform.html" id="booked">Book Me</a>
-              <a href="html/signinform.html" id="signin">Sign In</a>
+              <a href="html/bookingform.php" id="booked">Book Me</a>
+              <a href="html/signinform.php" id="signin">Sign In</a>
             </div>
           </div>
         </div>
@@ -110,7 +110,7 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Voluptas alias suscipit, assumenda dignissimos harum maxime!
               </p>
-              <a href="html/creativeWork.html">View More...</a>
+              <a href="html/creativeWork.php">View More...</a>
             </div>
           </div>
           <div class="cateItem Gitem3">
@@ -144,7 +144,7 @@
                 deleniti aliquid eligendi labore autem iure dolores. Vel,
                 deleniti? Ducimus soluta vero cum magnam?
               </p>
-              <a href="html/about.html"
+              <a href="html/about.php"
                 >Learn more <i class="fa-solid fa-arrow-right-long"></i
               ></a>
             </div>
@@ -184,7 +184,7 @@
                 totam soluta ipsum voluptate architecto nobis error, possimus
                 necessitatibus provident laborum delectus repellat obcaecati!
               </p>
-              <a href="html/photoBook.html"
+              <a href="html/photoBook.php"
                 >View All Products <i class="fa-solid fa-arrow-right-long"></i
               ></a>
             </div>
@@ -210,7 +210,7 @@
               </div>
               <div class="bookingPrice">
                 <h3>BDT 25,500</h3>
-                <a href="html/bookingform.html" class="BookingBtn"
+                <a href="html/bookingform.php" class="BookingBtn"
                   >Book Now <i class="fa-solid fa-arrow-right-long"></i
                 ></a>
               </div>
@@ -229,7 +229,7 @@
               </div>
               <div class="bookingPrice">
                 <h3>BDT 15,500</h3>
-                <a href="html/bookingform.html" class="BookingBtn"
+                <a href="html/bookingform.php" class="BookingBtn"
                   >Book Now <i class="fa-solid fa-arrow-right-long"></i
                 ></a>
               </div>
@@ -248,7 +248,7 @@
               </div>
               <div class="bookingPrice">
                 <h3>BDT 12,500</h3>
-                <a href="html/bookingform.html" class="BookingBtn"
+                <a href="html/bookingform.php" class="BookingBtn"
                   >Book Now <i class="fa-solid fa-arrow-right-long"></i
                 ></a>
               </div>
@@ -267,7 +267,7 @@
               </div>
               <div class="bookingPrice">
                 <h3>BDT 8,500</h3>
-                <a href="html/bookingform.html" class="BookingBtn"
+                <a href="html/bookingform.php" class="BookingBtn"
                   >Book Now <i class="fa-solid fa-arrow-right-long"></i
                 ></a>
               </div>

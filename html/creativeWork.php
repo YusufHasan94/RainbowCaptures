@@ -53,10 +53,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="../index.html">Home</a>
+                <a class="nav-link" href="../index.php">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="photoBook.html">Gallery</a>
+                <a class="nav-link" href="photoBook.php">Gallery</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link" href="#packages">Packages</a>
@@ -66,8 +66,8 @@
               </li>
             </ul>
             <div class="login bookingPart">
-              <a href="bookingform.html" id="booked">Book Me</a>
-              <a href="signinform.html" id="signin">Sign In</a>
+              <a href="bookingform.php" id="booked">Book Me</a>
+              <a href="signinform.php" id="signin">Sign In</a>
             </div>
           </div>
         </div>
@@ -92,7 +92,7 @@
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </p>
-                <a href="album1.html" class="cwAlbumbtn"
+                <a href="album1.php" class="cwAlbumbtn"
                   >View more <i class="fa-solid fa-arrow-right-long"></i
                 ></a>
               </div>
@@ -112,7 +112,7 @@
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </p>
-                <a href="album2.html" class="cwAlbumbtn"
+                <a href="album2.php" class="cwAlbumbtn"
                   >View more <i class="fa-solid fa-arrow-right-long"></i
                 ></a>
               </div>
@@ -127,7 +127,7 @@
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </p>
-                <a href="album3.html" class="cwAlbumbtn"
+                <a href="album3.php" class="cwAlbumbtn"
                   >View more <i class="fa-solid fa-arrow-right-long"></i
                 ></a>
               </div>
@@ -146,7 +146,7 @@
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </p>
-                <a href="album4.html" class="cwAlbumbtn"
+                <a href="album4.php" class="cwAlbumbtn"
                   >View more <i class="fa-solid fa-arrow-right-long"></i
                 ></a>
               </div>
@@ -165,7 +165,7 @@
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </p>
-                <a href="album5.html" class="cwAlbumbtn"
+                <a href="album5.php" class="cwAlbumbtn"
                   >View more <i class="fa-solid fa-arrow-right-long"></i
                 ></a>
               </div>
@@ -184,7 +184,7 @@
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </p>
-                <a href="album6.html" class="cwAlbumbtn"
+                <a href="album6.php" class="cwAlbumbtn"
                   >View more <i class="fa-solid fa-arrow-right-long"></i
                 ></a>
               </div>

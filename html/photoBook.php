@@ -53,10 +53,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="../index.html">Home</a>
+                <a class="nav-link" href="../index.php">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="photoBook.html">Gallery</a>
+                <a class="nav-link" href="photoBook.php">Gallery</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link" href="#packages">Packages</a>
@@ -66,44 +66,40 @@
               </li>
             </ul>
             <div class="login bookingPart">
-                <a href="bookingform.html" id="booked">Book Me</a>
-                <a href="signinform.html" id="signin">Sign In</a>
+              <a href="bookingform.php" id="booked">Book Me</a>
+              <a href="signinform.php" id="signin">Sign In</a>
             </div>
           </div>
         </div>
       </nav>
     </header>
     <main>
-      <section class="bookingArea">
-        <div class="container">
-          <h1>Select Your Suitable Package</h1>
-          <form action="">
-            <input type="text" name="" id="" placeholder="Name" />
-            <input type="number" name="" id="" placeholder="Mobile Number" />
-            <input type="email" name="" id="" placeholder="Email Address" />
-            <select name="" id="">
-              <option value="none">Choose Your Pckages</option>
-              <option value="Package 1">Exclusive Wedding Combo</option>
-              <option value="Package 2">Standard Wedding Combo</option>
-              <option value="Package 3">Casual Event</option>
-              <option value="Package 4">Casual Potrait</option>
-            </select>
-            <textarea
-              name=""
-              id=""
-              cols="30"
-              rows="3"
-              placeholder="Address To Contact"
-            ></textarea>
-            <textarea
-              name=""
-              id=""
-              cols="30"
-              rows="6"
-              placeholder="Your Messages"
-            ></textarea>
-            <input type="submit" value="Submit" name="submit" class="submit" />
-          </form>
+      <section class="photoBookSec">
+        <div class="contitleArea">
+          <h1 class="contentTitle">Photo Book</h1>
+        </div>
+        <div class="photoContainer container">
+          <div class="imgCon container1">
+            <img src="../picture/DSC_1133.jpg" alt="" />
+            <img src="../picture/DSC_6436.jpg" alt="" />
+            <img src="../picture/DSC_1134.jpg" alt="" />
+          </div>
+          <div class="imgCon container2">
+            <img src="../picture/DSC_8201.jpg" alt="" />
+            <img src="../picture/pic017.jpg" alt="" />
+            <img src="../picture/DSC_4322.jpg" alt="" />
+            <img src="../picture/1667753041521.jpg" alt="" />
+          </div>
+          <div class="imgCon container3">
+            <img src="../picture/DSC_9878.jpg" alt="" />
+            <img src="../picture/DSC_3853.jpg" alt="" />
+            <img src="../picture/1667753041554.jpg" alt="" />
+          </div>
+          <div class="imgCon container4">
+            <img src="../picture/1667753041577.jpg" alt="" />
+            <img src="../picture/DSC_2222.jpg" alt="" />
+            <img src="../picture/DSC_1252.jpg" alt="" />
+          </div>
         </div>
       </section>
     </main>

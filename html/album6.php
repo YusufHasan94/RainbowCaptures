@@ -53,10 +53,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="../index.html">Home</a>
+                <a class="nav-link" href="../index.php">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="photoBook.html">Gallery</a>
+                <a class="nav-link" href="photoBook.php">Gallery</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link" href="#packages">Packages</a>
@@ -66,8 +66,8 @@
               </li>
             </ul>
             <div class="login bookingPart">
-              <a href="bookingform.html" id="booked">Book Me</a>
-              <a href="signinform.html" id="signin">Sign In</a>
+              <a href="bookingform.php" id="booked">Book Me</a>
+              <a href="signinform.php" id="signin">Sign In</a>
             </div>
           </div>
         </div>
@@ -76,28 +76,24 @@
     <main>
       <section class="photoBookSec">
         <div class="contitleArea">
-          <h1 class="contentTitle">Album 1</h1>
+          <h1 class="contentTitle">Album 6</h1>
         </div>
         <div class="photoContainer container">
           <div class="container1 albumContainer">
-            <img src="../picture/1667753041506.jpg" alt="" />
-            <img src="../picture/1667753041525.jpg" alt="" />
-            <img src="../picture/1667753041550.jpg" alt="" />
+            <img src="../picture/DSC_4719.jpg" alt="" />
+            <img src="../picture/DSC_4860-2.jpg" alt="" />
           </div>
           <div class="container2 albumContainer">
-            <img src="../picture/1667753041521.jpg" alt="" />
-            <img src="../picture/1667753041532.jpg" alt="" />
-            <img src="../picture/1667753041536.jpg" alt="" />
+            <img src="../picture/DSC_4863-2.jpg" alt="" />
+            <img src="../picture/DSC_4760.jpg" alt="" />
           </div>
           <div class="container3 albumContainer">
-            <img src="../picture/1667753041510.jpg" alt="" />
-            <img src="../picture/1667753041559.jpg" alt="" />
-            <img src="../picture/1667753041540.jpg" alt="" />
+            <img src="../picture/DSC_4721.jpg" alt="" />
           </div>
           <div class="container4 albumContainer">
-            <img src="../picture/1667753041565.jpg" alt="" />
-            <img src="../picture/1667753041554.jpg" alt="" />
-            <img src="../picture/1667753041570.jpg" alt="" />
+            <img src="../picture/DSC_4771.jpg" alt="" />
+            <img src="../picture/DSC_4865.jpg" alt="" />
+            <img src="../picture/DSC_4775.jpg" alt="" />
           </div>
         </div>
       </section>

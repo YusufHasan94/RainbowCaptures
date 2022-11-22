@@ -53,10 +53,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="../index.html">Home</a>
+                <a class="nav-link" href="../index.php">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="photoBook.html">Gallery</a>
+                <a class="nav-link" href="photoBook.php">Gallery</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link" href="#packages">Packages</a>
@@ -66,23 +66,32 @@
               </li>
             </ul>
             <div class="login bookingPart">
-              <a href="bookingform.html" id="booked">Book Me</a>
-              <a href="signinform.html" id="signin">Sign In</a>
+              <a href="bookingform.php" id="booked">Book Me</a>
+              <a href="signinform.php" id="signin">Sign In</a>
             </div>
           </div>
         </div>
       </nav>
     </header>
     <main>
-      <section class="loginArea">
-        <div class="container">
-          <h1>Log In</h1>
-          <form action="">
-            <input type="text" name="" id="" placeholder="User Name" />
-            <input type="password" name="" id="" placeholder="Password" />
-            <input type="submit" value="submit" name="submit" class="submit" />
-          </form>
-          <span id="signInNote">Note: Only Admin can login here. </span>
+      <section class="photoBookSec">
+        <div class="contitleArea">
+          <h1 class="contentTitle">Album 4</h1>
+        </div>
+        <div class="photoContainer container">
+          <div class="container1 albumContainer">
+            <img src="../picture/DSC_1059.jpg" alt="" />
+          </div>
+          <div class="container2 albumContainer">
+            <img src="../picture/newDSC_1065.jpg" alt="" />
+            <img src="../picture/DSC_1074.jpg" alt="" />
+          </div>
+          <div class="container3 albumContainer">
+            <img src="../picture/DSC_1134.jpg" alt="" />
+          </div>
+          <div class="container4 albumContainer">
+            <img src="../picture/DSC_1133.jpg" alt="" />
+          </div>
         </div>
       </section>
     </main>

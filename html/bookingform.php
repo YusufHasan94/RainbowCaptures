@@ -1,3 +1,49 @@
+<?php
+ $name = $mobile = $email = $package = $address = $message = "";
+ $nameErr = $mobileErr = $emailErr = $packageErr = $addressErr = $messageErr = $err= "";
+ if(isset($_POST["submit"])){
+  if(empty($_POST["name"])){
+    $nameErr = "* required";
+  }
+  else{
+    $name = $_POST["name"];
+  }
+  if(empty($_POST["mobile"])){
+    $mobileErr = "* required";
+  }
+  else{
+    $mobile = $_POST["mobile"];
+  }
+  if(empty($_POST["email"])){
+    $emailErr = "* required";
+  }
+  else{
+    $email = $_POST["email"];
+  }
+  if(empty($_POST["package"])){
+    $packageErr = "* required";
+  }
+  else{
+    $package = $_POST["package"];
+  }
+  if(empty($_POST["address"])){
+    $addressErr = "* required";
+  }
+  else{
+    $address = $_POST["address"];
+  }
+  if(empty($_POST["message"])){
+    $messageErr = "* required";
+  }
+  else{
+    $message = $_POST["message"];
+  }
+ }
+ if($nameErr!="" ||$mobileErr!="" ||$emailErr!="" ||$packageErr!="" ||$addressErr!="" ||$messageErr!=""){
+  $err = "* all filled must be field out";
+ }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -31,6 +77,11 @@
     />
     <link rel="stylesheet" href="../css/style.css" />
     <title>Rainbow Captures</title>
+    <style>
+      .error{
+        color: red;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -53,10 +104,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="../index.html">Home</a>
+                <a class="nav-link" href="../index.php">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="photoBook.html">Gallery</a>
+                <a class="nav-link" href="photoBook.php">Gallery</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link" href="#packages">Packages</a>
@@ -66,35 +117,45 @@
               </li>
             </ul>
             <div class="login bookingPart">
-              <a href="bookingform.html" id="booked">Book Me</a>
-              <a href="signinform.html" id="signin">Sign In</a>
+                <a href="bookingform.php" id="booked">Book Me</a>
+                <a href="signinform.php" id="signin">Sign In</a>
             </div>
           </div>
         </div>
       </nav>
     </header>
     <main>
-      <section class="photoBookSec">
-        <div class="contitleArea">
-          <h1 class="contentTitle">Album 6</h1>
-        </div>
-        <div class="photoContainer container">
-          <div class="container1 albumContainer">
-            <img src="../picture/DSC_4719.jpg" alt="" />
-            <img src="../picture/DSC_4860-2.jpg" alt="" />
-          </div>
-          <div class="container2 albumContainer">
-            <img src="../picture/DSC_4863-2.jpg" alt="" />
-            <img src="../picture/DSC_4760.jpg" alt="" />
-          </div>
-          <div class="container3 albumContainer">
-            <img src="../picture/DSC_4721.jpg" alt="" />
-          </div>
-          <div class="container4 albumContainer">
-            <img src="../picture/DSC_4771.jpg" alt="" />
-            <img src="../picture/DSC_4865.jpg" alt="" />
-            <img src="../picture/DSC_4775.jpg" alt="" />
-          </div>
+      <section class="bookingArea">
+        <div class="container">
+          <h1>Select Your Suitable Package</h1>
+          <form action="" method="POST">
+            <input type="text" name="name" id="" placeholder="Name" /> <span class="error"><?php echo $nameErr?></span>
+            <input type="number" name="mobile" id="" placeholder="Mobile Number" /> <span class="error"><?php echo $mobileErr?></span>
+            <input type="email" name="email" id="" placeholder="Email Address" /> <span class="error"><?php echo $emailErr?></span>
+            <select name="package" id=""> <span class="error"><?php echo $packageErr?></span>
+              <option value="none">Choose Your Pckages</option>
+              <option value="Package 1">Exclusive Wedding Combo</option>
+              <option value="Package 2">Standard Wedding Combo</option>
+              <option value="Package 3">Casual Event</option>
+              <option value="Package 4">Casual Potrait</option>
+            </select>
+            <textarea
+              name="contact"
+              id=""
+              cols="30"
+              rows="3"
+              placeholder="Address To Contact"
+            ></textarea> <span class="error"><?php echo $addressErr?></span>
+            <textarea
+              name="message"
+              id=""
+              cols="30"
+              rows="6"
+              placeholder="Your Messages"
+            ></textarea> <span class="error"><?php echo $messageErr?></span>
+            <input type="submit" value="Submit" name="submit" class="submit" /> <span class="error"><?php echo $err?></span>
+
+          </form>
         </div>
       </section>
     </main>
