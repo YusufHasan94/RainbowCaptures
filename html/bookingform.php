@@ -1,48 +1,59 @@
 <?php
- $name = $mobile = $email = $package = $address = $message = "";
- $nameErr = $mobileErr = $emailErr = $packageErr = $addressErr = $messageErr = $err= "";
- if(isset($_POST["submit"])){
-  if(empty($_POST["name"])){
-    $nameErr = "* required";
-  }
-  else{
-    $name = $_POST["name"];
-  }
-  if(empty($_POST["mobile"])){
-    $mobileErr = "* required";
-  }
-  else{
-    $mobile = $_POST["mobile"];
-  }
-  if(empty($_POST["email"])){
-    $emailErr = "* required";
-  }
-  else{
-    $email = $_POST["email"];
-  }
-  if(empty($_POST["package"])){
-    $packageErr = "* required";
-  }
-  else{
-    $package = $_POST["package"];
-  }
-  if(empty($_POST["address"])){
-    $addressErr = "* required";
-  }
-  else{
-    $address = $_POST["address"];
-  }
-  if(empty($_POST["message"])){
-    $messageErr = "* required";
-  }
-  else{
-    $message = $_POST["message"];
-  }
- }
- if($nameErr!="" ||$mobileErr!="" ||$emailErr!="" ||$packageErr!="" ||$addressErr!="" ||$messageErr!=""){
-  $err = "* all filled must be field out";
- }
+  require "../connection.php";
 
+  
+  $name = $mobile = $email = $package = $address = $message = $successful = "";
+  $nameErr = $mobileErr = $emailErr = $packageErr = $addressErr = $messageErr = $err =  $failed = "";
+  if(isset($_POST["submit"])){
+    if(empty($_POST["name"])){
+      $nameErr = "* required";
+    }
+    else{
+      $name = $_POST["name"];
+    }
+    if(empty($_POST["mobile"])){
+      $mobileErr = "* required";
+    }
+    else{
+      $mobile = $_POST["mobile"];
+    }
+    if(empty($_POST["email"])){
+      $emailErr = "* required";
+    }
+    else{
+      $email = $_POST["email"];
+    }
+    if(empty($_POST["package"])){
+      $packageErr = "* required";
+    }
+    else{
+      $package = $_POST["package"];
+    }
+    if(empty($_POST["address"])){
+      $addressErr = "* required";
+    }
+    else{
+      $address = $_POST["address"];
+    }
+    if(empty($_POST["message"])){
+      $messageErr = "* required";
+    }
+    else{
+      $message = $_POST["message"];
+    }
+    if($nameErr!="" ||$mobileErr!="" ||$emailErr!="" ||$packageErr!="" ||$addressErr!="" ||$messageErr!=""){
+      $err = "* all filled must be field out";
+    }
+    else{
+      $query = mysqli_query($conn, "INSERT INTO bookinginfo (name, mobile, email, package, address, message) values('$name', '$mobile', '$email', '$package', '$address', '$message')");
+      if($query){
+        $successful = "Booking confirm";
+      }
+      else{
+        $failed = "Booking failed";
+      }
+    }
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -128,6 +139,10 @@
       <section class="bookingArea">
         <div class="container">
           <h1>Select Your Suitable Package</h1>
+
+          <span style="color: red;"><?php echo $failed ?></span>
+          <span style="color: green;"><?php echo $successful ?></span>
+
           <form action="" method="POST">
             <input type="text" name="name" id="" placeholder="Name" /> <span class="error"><?php echo $nameErr?></span>
             <input type="number" name="mobile" id="" placeholder="Mobile Number" /> <span class="error"><?php echo $mobileErr?></span>
@@ -140,7 +155,7 @@
               <option value="Package 4">Casual Potrait</option>
             </select>
             <textarea
-              name="contact"
+              name="address"
               id=""
               cols="30"
               rows="3"
@@ -203,13 +218,13 @@
           <h3>Follow Us</h3>
           <ul>
             <li>
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.instagram.com/rainbowcapturesbd/?fbclid=IwAR3ZBMyb9AvbS50yVB7-6l9AXKnxzRnh0eiQzMXyBR5VZPR-6045ph8rRrg"><i class="fa-brands fa-instagram"></i></a>
             </li>
             <li>
-              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://www.facebook.com/groups/4829171810533450"><i class="fa-brands fa-facebook"></i></a>
             </li>
             <li>
-              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+              <a href="https://www.youtube.com/c/NabiunSizan/featured"><i class="fa-brands fa-youtube"></i></a>
             </li>
           </ul>
         </div>

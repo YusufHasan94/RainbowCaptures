@@ -310,6 +310,7 @@ footer{
     grid-template-columns: 25% 25% 25% 25%;
     gap: 3px;
     justify-content: space-between;
+    align-items: center;
     padding: 5px;
 }
 .imgCon{

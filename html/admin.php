@@ -1,3 +1,11 @@
+<?php
+  session_start();
+  require "../connection.php";
+
+  if(isset($_SESSION["username"])){
+    $username = $_SESSION["username"];
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -24,13 +32,58 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
     />
-    <link
-      rel="shortcut icon"
-      href="../picture/x-icon.png"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="../picture/x-icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="../css/style.css" />
     <title>Rainbow Captures</title>
+    <style>
+      #adminName{
+        color: black;
+        font-size: 18px;
+        font-weight: 500;
+        margin: 0 10px;
+      }
+      #signout{
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+      }
+      .admin{
+        height: 100vh;
+      }
+      .admin_panel_heading{
+        text-align: center;
+        padding: 10px 0;
+      }
+      .admin_panel_body{
+        height: 100%;
+      }
+      .admin_panel_body>div{
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+      }
+      .data_table{
+        width: 100%;
+        margin: 25px;
+      }
+      .data_table
+      .data_table_area> table, td, th{
+        border: 1px solid black;
+      }
+      .data_table th,td{
+        padding: 5px;
+        font-size: 17px;
+      }
+      .data_table th{
+        text-align: center;
+      }
+      @media screen and (max-width: 667px){
+        .data_table th,td{
+          padding: 2px;
+          font-size: 12px;
+        }
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -53,47 +106,71 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="../index.php">Home</a>
+                <a class="nav-link active" aria-current="page" href="../index.php">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="photoBook.php">Gallery</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link" href="#packages">Packages</a>
+                <a class="nav-link" href="../index.php">Packages</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#about">About Us</a>
+                <a class="nav-link" href="../about.php">About Us</a>
               </li>
             </ul>
             <div class="login bookingPart">
-              <a href="bookingform.php" id="booked">Book Me</a>
-              <a href="signinform.php" id="signin">Sign In</a>
+              <span id="adminName"><?php echo $username ?></span>
+              <a href="signinform.php" id="signout">Sign out</a>
             </div>
           </div>
         </div>
       </nav>
     </header>
     <main>
-      <section class="photoBookSec">
-        <div class="contitleArea">
-          <h1 class="contentTitle">Album 5</h1>
-        </div>
-        <div class="photoContainer container">
-          <div class="container1 albumContainer">
-            <img src="../picture/DSC_9878.jpg" alt="" />
-          </div>
-          <div class="container2 albumContainer">
-            <img src="../picture/DSC_9982.jpg" alt="" />
-          </div>
-          <div class="container3 albumContainer">
-            <img src="../picture/newpic018.jpg" alt="" />
-            <img src="../picture/pic02.jpg" alt="" />
-          </div>
-          <div class="container4 albumContainer">
-            <img src="../picture/pic01.jpg" alt="" />
-          </div>
-        </div>
-      </section>
+        <section class="section admin">
+            <div class="admin_panel">
+                <div class="caontainer">
+                    <div class="admin_panel_heading">
+                        <h1 class="contentTitle">All About Booking Information</h1>
+                    </div>
+                    <div class="admin_panel_body">
+                      <div class="data_table_area">
+                        <table class="data_table">
+                            <thead>
+                              <tr>
+                                <th>Serial No</th>
+                                <th>Name</th>
+                                <th>Mobile Number</th>
+                                <th>Email Address</th>
+                                <th>Packages</th>
+                                <th>Contact Address</th>
+                                <th>Message</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <?php 
+                                $query = mysqli_query($conn, "select * from bookinginfo");
+                                while($row=mysqli_fetch_array($query)){
+                              ?>
+                                <tr>
+                                  <td><?php echo $row["id"]?></td>
+                                  <td><?php echo $row["name"]?></td>
+                                  <td><?php echo $row["mobile"]?></td>
+                                  <td><?php echo $row["email"]?></td>
+                                  <td><?php echo $row["package"]?></td>
+                                  <td><?php echo $row["address"]?></td>
+                                  <td><?php echo $row["message"]?></td>
+                                </tr>
+                              <?php
+                                }
+                              ?>
+                            </tbody>
+                        </table>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
       <div class="footerContainer">

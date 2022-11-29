@@ -138,13 +138,13 @@
           <h3>Follow Us</h3>
           <ul>
             <li>
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.instagram.com/rainbowcapturesbd/?fbclid=IwAR3ZBMyb9AvbS50yVB7-6l9AXKnxzRnh0eiQzMXyBR5VZPR-6045ph8rRrg"><i class="fa-brands fa-instagram"></i></a>
             </li>
             <li>
-              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://www.facebook.com/groups/4829171810533450"><i class="fa-brands fa-facebook"></i></a>
             </li>
             <li>
-              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+              <a href="https://www.youtube.com/c/NabiunSizan/featured"><i class="fa-brands fa-youtube"></i></a>
             </li>
           </ul>
         </div>

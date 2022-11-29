@@ -1,6 +1,10 @@
 <?php
- $username = $password = "";
+  session_start();
+  require "../connection.php";
+
+ $username = $password = $successful ="";
  $usernameErr = $passwordErr = $err = "";
+
   if(isset($_POST["submit"])){
     if(empty($_POST["username"])){
       $usernameErr = "* required";
@@ -16,6 +20,16 @@
     }
     if($usernameErr!=""||$passwordErr!=""){
       $err = "* please fill up all necessary info";
+    }
+    else{
+      $query = mysqli_query($conn, "SELECT * FROM adminlogin WHERE username='$username' AND password='$password'");
+      while($row = mysqli_fetch_assoc($query)){
+        if($row["username"]= $username && $row["password"] = $password){
+          //$successful = "login succussful";
+          $_SESSION["username"] = $username;
+          header("Location: admin.php");
+        }
+      }
     }
   }
 ?>
@@ -104,6 +118,7 @@
       <section class="loginArea">
         <div class="container">
           <h1>Log In</h1>
+          <span><?php echo $successful ?></span>
           <form action="" method="POST">
             <input type="text" name="username" id="" placeholder="User Name" /> <span class="error"><?php echo $usernameErr?></span>
             <input type="password" name="password" id="" placeholder="Password" /> <span class="error"><?php echo $passwordErr?></span>
@@ -157,13 +172,13 @@
           <h3>Follow Us</h3>
           <ul>
             <li>
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.instagram.com/rainbowcapturesbd/?fbclid=IwAR3ZBMyb9AvbS50yVB7-6l9AXKnxzRnh0eiQzMXyBR5VZPR-6045ph8rRrg"><i class="fa-brands fa-instagram"></i></a>
             </li>
             <li>
-              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://www.facebook.com/groups/4829171810533450"><i class="fa-brands fa-facebook"></i></a>
             </li>
             <li>
-              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+              <a href="https://www.youtube.com/c/NabiunSizan/featured"><i class="fa-brands fa-youtube"></i></a>
             </li>
           </ul>
         </div>
