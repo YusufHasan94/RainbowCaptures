@@ -1,1 +1,1 @@
-https://yusufhasan94.github.io/RainbowCaptures/
+http://rainbowcaptures.com/
